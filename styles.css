@@ -349,7 +349,8 @@ body {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    text-align: center;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
 }
