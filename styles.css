@@ -386,6 +386,11 @@ body {
     background: var(--gray-100);
 }
 
+.propostas .section-main-title {
+    color: var(--primary-blue) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .section-main-title {
     text-align: center;
     font-size: 3rem;
@@ -393,6 +398,7 @@ body {
     color: var(--primary-blue);
     margin-bottom: 4rem;
     position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-main-title::after {
