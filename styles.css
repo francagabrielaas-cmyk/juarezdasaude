@@ -349,8 +349,7 @@ body {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 1rem;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
 }
