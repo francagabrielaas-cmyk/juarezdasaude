@@ -66,39 +66,12 @@ animatedElements.forEach(el => {
     observer.observe(el);
 });
 
-// Counter animation for numbers
+// Counter animation for numbers - DISABLED
+// Numbers now appear directly without animation
 function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-    
-    const timer = setInterval(() => {
-        start += increment;
-        element.textContent = Math.floor(start);
-        
-        if (start >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        }
-    }, 16);
+    // Animation disabled - numbers appear instantly
+    element.textContent = target;
 }
-
-// Animate counters when they come into view
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseInt(counter.textContent);
-            animateCounter(counter, target);
-            counterObserver.unobserve(counter);
-        }
-    });
-}, { threshold: 0.5 });
-
-// Observe counter elements
-const counters = document.querySelectorAll('.urgent-number, .numero, .numero-grande');
-counters.forEach(counter => {
-    counterObserver.observe(counter);
-});
 
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
