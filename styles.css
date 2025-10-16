@@ -507,21 +507,23 @@ body {
 
 .proposta-content {
     padding: 2rem;
+    background: #fafafa;
 }
 
 .proposta-list {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .proposta-list li {
     position: relative;
     padding-left: 2rem;
-    color: var(--gray-700);
-    line-height: 1.6;
+    color: var(--gray-800);
+    line-height: 1.8;
     font-weight: 500;
+    font-size: 1.05rem;
 }
 
 .proposta-list li::before {
