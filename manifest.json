@@ -1,0 +1,28 @@
+{
+    "name": "Campanha Juarez da Saúde - Três Rios Merece Mais",
+    "short_name": "Juarez 77",
+    "description": "Landing page oficial da campanha do Prefeito Juarez da Saúde e Vice Prof. Jacqueson",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1e3a8a",
+    "theme_color": "#1e3a8a",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "imagens/juarez-hero.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "imagens/juarez-hero.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["politics", "government", "campaign"],
+    "lang": "pt-BR",
+    "dir": "ltr"
+}
+
