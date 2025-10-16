@@ -73,15 +73,19 @@ function animateCounter(element, target, duration = 2000) {
     element.textContent = target;
 }
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
+// Parallax effect for hero section - disabled for better mobile performance
+// Only enable on desktop devices
+const enableParallax = window.innerWidth > 768;
+if (enableParallax) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const rate = scrolled * -0.3;
+            hero.style.transform = `translateY(${rate}px)`;
+        }
+    });
+}
 
 // Typing effect for hero title
 function typeWriter(element, text, speed = 100) {
@@ -298,19 +302,8 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(() => {
-    // Scroll-based animations and effects
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    
-    if (hero) {
-        const rate = scrolled * -0.3;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-}, 10);
-
-window.addEventListener('scroll', debouncedScrollHandler);
+// Apply debouncing to scroll events - removed duplicate parallax effect
+// Parallax is now handled above with mobile detection
 
 // Add keyboard navigation support
 document.addEventListener('keydown', (e) => {

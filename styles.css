@@ -40,6 +40,7 @@ body {
     color: var(--gray-800);
     background-color: var(--white);
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .container {
@@ -717,6 +718,11 @@ body {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    /* Disable transform effects on hero for better mobile performance */
+    .hero {
+        transform: none !important;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
