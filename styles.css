@@ -62,7 +62,7 @@ body {
     background: rgba(30, 58, 138, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    transition: var(--transition);
+    transition: none;
     will-change: transform;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
@@ -142,7 +142,7 @@ body {
     height: 3px;
     background: var(--white);
     margin: 3px 0;
-    transition: var(--transition);
+    transition: none;
 }
 
 /* Hero Section */
@@ -854,7 +854,7 @@ body {
         background-color: var(--primary-blue);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: none;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
     }
