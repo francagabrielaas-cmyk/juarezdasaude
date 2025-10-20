@@ -108,12 +108,12 @@ body {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     position: relative;
 }
 
 .nav-link:hover {
-    color: var(--accent-orange);
+    color: var(--white);
 }
 
 .nav-link::after {
@@ -124,11 +124,11 @@ body {
     width: 0;
     height: 2px;
     background: var(--accent-orange);
-    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width: 0;
 }
 
 .nav-toggle {
@@ -269,11 +269,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     display: inline-block;
     text-align: center;
     border: 2px solid transparent;
@@ -287,9 +283,9 @@ body {
 }
 
 .btn-primary:hover {
-    background: #d97706;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
+    background: var(--accent-orange);
+    transform: none;
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
@@ -299,9 +295,9 @@ body {
 }
 
 .btn-secondary:hover {
-    background: var(--white);
-    color: var(--primary-blue);
-    transform: translateY(-2px);
+    background: transparent;
+    color: var(--white);
+    transform: none;
 }
 
 .hero-image {
@@ -313,7 +309,7 @@ body {
     height: auto;
     border-radius: 20px;
     box-shadow: var(--shadow-xl);
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
@@ -321,7 +317,7 @@ body {
 }
 
 .hero-img:hover {
-    transform: scale(1.02) translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Ações Urgentes */
@@ -390,14 +386,13 @@ body {
     align-items: center;
     gap: 1rem;
     box-shadow: var(--shadow-lg);
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     will-change: auto;
 }
 
 .urgent-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: none;
+    box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 768px) {
@@ -470,14 +465,13 @@ body {
     margin-bottom: 3rem;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     will-change: auto;
 }
 
 .proposta-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: none;
+    box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 768px) {
@@ -648,15 +642,14 @@ body {
     padding: 2rem;
     text-align: center;
     box-shadow: var(--shadow-xl);
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none;
     backdrop-filter: blur(10px);
     will-change: auto;
 }
 
 .candidato-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: none;
+    box-shadow: var(--shadow-xl);
 }
 
 @media (max-width: 768px) {
