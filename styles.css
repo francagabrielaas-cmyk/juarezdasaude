@@ -146,6 +146,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding-top: 100px;
 }
 
 .hero::before {
@@ -176,6 +177,7 @@ body {
 
 .hero-title {
     margin-bottom: 1.5rem;
+    margin-top: 0;
 }
 
 .title-main {
@@ -184,6 +186,7 @@ body {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
 .title-highlight {
@@ -780,6 +783,10 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hero {
+        padding-top: 100px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -842,7 +849,7 @@ body {
     }
 
     .hero {
-        padding: 2rem 0;
+        padding: 100px 0 2rem 0;
     }
 
     .title-highlight {
