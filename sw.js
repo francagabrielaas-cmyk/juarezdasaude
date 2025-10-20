@@ -1,5 +1,5 @@
 // Service Worker para cache offline
-const CACHE_NAME = 'juarez-campanha-v1';
+const CACHE_NAME = 'juarez-campanha-v2';
 const urlsToCache = [
     '/',
     '/index.html',
