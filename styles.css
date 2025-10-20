@@ -31,7 +31,8 @@
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     
     /* Transições */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 body {
@@ -107,7 +108,7 @@ body {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
-    transition: var(--transition);
+    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
 }
 
@@ -123,7 +124,7 @@ body {
     width: 0;
     height: 2px;
     background: var(--accent-orange);
-    transition: var(--transition);
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav-link:hover::after {
@@ -268,7 +269,11 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: inline-block;
     text-align: center;
     border: 2px solid transparent;
@@ -308,7 +313,7 @@ body {
     height: auto;
     border-radius: 20px;
     box-shadow: var(--shadow-xl);
-    transition: var(--transition);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
@@ -385,7 +390,8 @@ body {
     align-items: center;
     gap: 1rem;
     box-shadow: var(--shadow-lg);
-    transition: var(--transition);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: auto;
 }
 
@@ -464,7 +470,8 @@ body {
     margin-bottom: 3rem;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
-    transition: var(--transition);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: auto;
 }
 
@@ -641,7 +648,8 @@ body {
     padding: 2rem;
     text-align: center;
     box-shadow: var(--shadow-xl);
-    transition: var(--transition);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     will-change: auto;
 }
