@@ -386,11 +386,23 @@ body {
     gap: 1rem;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
+    will-change: auto;
 }
 
 .urgent-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+    .urgent-item {
+        transition: none;
+    }
+    
+    .urgent-item:hover {
+        transform: none;
+        box-shadow: var(--shadow-lg);
+    }
 }
 
 .urgent-number {
@@ -453,11 +465,24 @@ body {
     box-shadow: var(--shadow-lg);
     overflow: hidden;
     transition: var(--transition);
+    will-change: auto;
 }
 
 .proposta-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+    .proposta-card {
+        transition: none;
+        will-change: auto;
+    }
+    
+    .proposta-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-lg);
+    }
 }
 
 .proposta-header {
@@ -618,11 +643,23 @@ body {
     box-shadow: var(--shadow-xl);
     transition: var(--transition);
     backdrop-filter: blur(10px);
+    will-change: auto;
 }
 
 .candidato-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .candidato-card {
+        transition: none;
+    }
+    
+    .candidato-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-xl);
+    }
 }
 
 .candidato-image {
@@ -762,23 +799,50 @@ body {
     /* Optimize for mobile performance */
     * {
         -webkit-tap-highlight-color: transparent;
+        will-change: auto !important;
     }
     
     body {
         -webkit-text-size-adjust: 100%;
     }
     
+    /* Desativar todas as transições que causam repaint */
+    section,
     .proposta-card,
     .candidato-card,
-    .urgent-item {
-        transition: none;
+    .urgent-item,
+    .hero-img,
+    .candidato-img {
+        transition: none !important;
+    }
+    
+    .proposta-card,
+    .candidato-card,
+    .urgent-item,
+    .hero-img,
+    .btn,
+    .nav-link {
+        transition: none !important;
         transform: none !important;
+        animation: none !important;
     }
     
     .proposta-card:hover,
     .candidato-card:hover,
-    .urgent-item:hover {
+    .urgent-item:hover,
+    .hero-img:hover,
+    .btn:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
         transform: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Desativar animações de entrada */
+    .animate-fadeInUp,
+    .animate-fadeInLeft,
+    .animate-fadeInRight {
+        animation: none !important;
     }
     
     .nav-menu {
